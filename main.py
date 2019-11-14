@@ -66,7 +66,7 @@ if message != "El trayecto consultado no se encuentra disponible para la venta e
     sender_email = gmail_credentials.SENDER_EMAIL  # Enter your address
     receiver_email = gmail_credentials.RECEIVER_EMAIL  # Enter receiver address
     password = gmail_credentials.PASSWORD
-    msg = "Los trenes de" + ORIGEN + "a" + DESTINO + "para el día" + FECHA_IDA + "ya están disponibles. ¡Corre que vuelan!"
+    msg = "Los trenes de " + ORIGEN + " a " + DESTINO + " para el día " + FECHA_IDA + " ya están disponibles. ¡Corre que vuelan!"
 
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
