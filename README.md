@@ -2,7 +2,7 @@
 
 ## Goal
 
-Estaba harto de tener que acceder todos los días a la web de Renfe para ver si sacaban los billetes para Navidad (este año están tardando más de lo normal), así que hice este script que comprueba si han publicado los billetes para un trayecto y fecha concreto, y me envía un email en caso afirmativo.
+Estaba harto de tener que acceder todos los días a la web de Renfe para ver si sacaban los billetes para Navidad (este año están tardando más de lo normal), así que hice este script que comprueba si han publicado los billetes para un trayecto y fecha concreto, y envía un email en caso afirmativo.
 
 
 ## Files
@@ -36,8 +36,8 @@ El proceso es el siguiente:
 
 En la terminal:
 1. `crontab -e` para abrir crontab (el archivo que contiene los cronjobs). Se abre el archivo con un editor (vim o nano, el que esté por defecto). Si lo queremos abrir con nano hay que ejecutar antes en la terminal el comando `export EDITOR=nano`.
-2. Metemos el cronjob en el archivo mediante el texto `* * * * * command`. Los asteriscos significan la frecuencia u hora de ejecución del comando (esta [página](https://crontab.guru/) es de gran ayuda). A continuación se introduce el comando de ejecución que, en nuestro caso, estará formado por la ruta donde se encuentra instalado python (o python3) y la ruta donde se encuentra el archivo. Yo lo he configurado para que se ejecute cada hora de la siguiente forma:
-`*/60 * * * * /usr/local/bin/python3 /Users/gr/Ironhack/your-renfe-tickets-are-available/main.py`
+2. Metemos el cronjob en el archivo mediante el texto `* * * * * command`. Los asteriscos significan la frecuencia u hora de ejecución del comando (esta [página](https://crontab.guru/) es de gran ayuda). A continuación se introduce el comando de ejecución que, en nuestro caso, estará formado por la ruta donde se encuentra instalado python (o python3) y la ruta donde se encuentra el archivo. Yo lo he configurado para que se ejecute cada hora de la siguiente forma:\
+`*/60 * * * * /usr/local/bin/python3 /Users/gr/Ironhack/your-renfe-tickets-are-available/main.py`\
 Para saber dónde se encuentra python, ejecutamos `which python` en la terminal.
 3. Guardamos y salimos del editor. En nano, hacemos ctrl+o y enter (para guardar) y ctrl+x (para salir).
 4. `crontab -l` para ver los cronjobs activos. Debería estar nuestro cronjob.
