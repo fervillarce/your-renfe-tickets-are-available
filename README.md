@@ -9,7 +9,7 @@ Estaba harto de tener que acceder todos los días a la web de Renfe para ver si 
 
 * **main.py**. Este script extrae la información del elememento donde se encuentran los billetes publicados y envía un email cuando ya están disponibles.
 * **chromedriver**. Es necesario tener el driver de Chrome en la misma carpeta. Este driver se puede descargar de [aquí](https://chromedriver.chromium.org/).
-* **gmail_credentials.py**. Este archivo es necesario para indicar el sender_email, la password de gmail y el receiver_email. Esta aparte por seguridad. No está en este repositorio ya que se encuentra en el .gitignore.
+* **gmail_credentials.py**. Este archivo es necesario para indicar el `sender_email`, la `password` de gmail y el `receiver_email`. Estos parámetros también se pueden completar en el main pero es recomendable hacerlo en un archivo aparte (gmail_credentials) por seguridad. No está en este repositorio ya que se encuentra en el .gitignore.
 
 
 ## Pipeline description
@@ -30,7 +30,7 @@ El proceso es el siguiente:
 4. Programar el cronjob (ver cómo en el siguiente apartado).
 5. Para que gmail permita la conexión hay que activar "Permitir el acceso de aplicaciones poco seguras" en esta [página](https://myaccount.google.com/u/1/lesssecureapps?pageId=none).
 6. El correo llegará a la cuenta receiver_email cuando Renfe publique billetes para el trayecto y la fecha introducidos en el script (se encuentran como parámetros en la parte superior).
-
+Nota: si se corre en local, el cronjob no se ejecutará si el ordenador está apagado o hibernando. Por ello, es buena idea correrlo en un servidor remoto, por ejemplo, [Heroku](https://www.heroku.com/), que es gratuito. En tal caso, hay que configurar las variables de entorno para no desvelar las claves (ver este [artículo](https://help.pythonanywhere.com/pages/environment-variables-for-web-apps/).
 
 ### How to run a file automatically by setting a cronjob
 
