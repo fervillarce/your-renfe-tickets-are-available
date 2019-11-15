@@ -24,7 +24,7 @@ El proceso es el siguiente:
 
 ## How to use it
 
-1. Instalar selenium.
+1. Instalar selenium (documentación [aquí](https://selenium-python.readthedocs.io/)).
 2. Descargar archivos del repo en la misma carpeta.
 3. Introducir los parámetros de trayecto y fecha en el propio script.
 4. Programar el cronjob (ver cómo en el siguiente apartado).
