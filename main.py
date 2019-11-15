@@ -63,9 +63,9 @@ browser.close()
 if message != "El trayecto consultado no se encuentra disponible para la venta en estos momentos o bien no existe conexión directa, por favor inténtelo más adelante y disculpe las molestias.":
     port = 465  # For SSL
     smtp_server = "smtp.gmail.com"
-    sender_email = gmail_credentials.SENDER_EMAIL  # Enter your address
-    receiver_email = gmail_credentials.RECEIVER_EMAIL  # Enter receiver address
-    password = gmail_credentials.PASSWORD
+    sender_email = gmail_credentials.SENDER_EMAIL  # Enter your address in the gmail_credentials file o right here
+    receiver_email = gmail_credentials.RECEIVER_EMAIL  # Enter receiver address in the gmail_credentials file o right here
+    password = gmail_credentials.PASSWORD # Enter the password of the sender_email in the gmail_credentials file o right here
     msg = "Los trenes de " + ORIGEN + " a " + DESTINO + " para el día " + FECHA_IDA + " ya están disponibles. ¡Corre que vuelan!"
 
     context = ssl.create_default_context()
